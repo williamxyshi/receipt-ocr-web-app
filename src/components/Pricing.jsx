@@ -1,4 +1,5 @@
 import { CheckIcon } from '@heroicons/react/outline'
+import { Link } from 'react-router-dom'
 
 const tiers = [
   {
@@ -7,27 +8,29 @@ const tiers = [
     priceMonthly: 0,
     description: 'Free for personal projects',
     features: [
-      '10 000 api requests a month',
+      '10 000 API Requests a Month',
       'Adaptive Threshhold Preprocessing',
       'Receipt OCR Template',
       'Analytics Dashboard',
       'Free developer support (helpful advice not guaranteed)',
     ],
-    button: 'Sign Up'
+    button: 'Sign Up',
+    route: '/signup'
   },
   {
     name: 'Enterprise',
     href: '#',
-    priceMonthly: "200 + x",
+    priceMonthly: "x",
     description: 'Covers server + development fees',
     features: [
-      'Unlimited api requests a month',
+      'Unlimited API Requests a Month',
       'Custom Preprocessing',
       'Custom OCR Templates',
       'Analytics dashboard + custom fields',
       'Free developer support (helpful advice not guaranteed)',
     ],
-    button: 'Contact Me'
+    button: 'Contact Me',
+    route: '/contact'
   },
 ]
 
@@ -78,13 +81,14 @@ export default function Example() {
                       ))}
                     </ul>
                     <div className="rounded-md shadow">
-                      <a
+                      <Link
+                        to={tier.route}
                         href={tier.href}
                         className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-800 hover:bg-green-900"
                         aria-describedby="tier-standard"
                       >
                         {tier.button}
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

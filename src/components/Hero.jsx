@@ -94,10 +94,22 @@ export default function LandingPage() {
 
             </h2>
             <p className="mt-3 max-w-md mx-auto text-sm text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
-              Built as an api for <a className="underline" href="https://ezexpenses.app/"> EZExpenses</a>, we currently only
-              support OCR for receipts.
+              Built as a REST API for <a className="underline" href="https://ezexpenses.app/"> EZExpenses</a>, we currently only
+              support OCR for receipts (for free).
               <br/>
-              Don't expect it to work as well as a big boy api, feel free to contact me about any bugs or suggestions/improvements.
+              <br/>
+
+             
+         
+            </p>
+
+            <p className="text-sm text-gray-500">
+
+            The confidence and accuracy of our API is pretty low compared to other OCR services (Google Cloud, Cloudmersive) and I'm actively working on
+              improving that.
+              <br/>
+            We're using this API for autosuggesting on EZExpenses
+              right now as the accuracy isn't high enough for a smooth autofilling form experience yet. 
             </p>
         
           </div>
