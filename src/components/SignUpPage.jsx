@@ -27,7 +27,7 @@ export default function SignUpPage() {
       'Content-Type': 'application/json',
     }
     e.preventDefault();
-    axios.post("http://3.22.225.249/api/user", {
+    axios.post("https://3.22.225.249/api/user", {
       email: email,
       password: password
     }, {

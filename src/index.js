@@ -25,7 +25,6 @@ function App(props) {
   });
   
   const ProtectedRoute = ({ component: Component, user, ...rest }) => {
-    console.log(user)
     return (
       <Route {...rest} render={
         props => {
@@ -49,7 +48,6 @@ function App(props) {
   }
   const setUserModel = (user) => {
     setUser(user)
-    console.log(user)
   }
 
 
