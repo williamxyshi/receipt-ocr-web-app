@@ -9,7 +9,7 @@ const tiers = [
     description: 'Free for personal projects',
     features: [
       '10 000 API Requests a Month',
-      'Adaptive Threshhold Preprocessing',
+      'Threshhold Preprocessing',
       'Receipt OCR Template',
       'Analytics Dashboard',
       'Free developer support (helpful advice not guaranteed)',
