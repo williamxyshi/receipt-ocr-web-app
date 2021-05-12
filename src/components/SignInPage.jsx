@@ -27,7 +27,7 @@ export default function SignInPage({ setJwtToken, setUserModel }) {
       'Content-Type': 'application/json',
     }
     e.preventDefault();
-    axios.post("https://3.22.225.249/api/user/login", {
+    axios.post("https://api.teahouseapps.app/api/user/login", {
       email: email,
       password: password
     }, {
@@ -35,7 +35,7 @@ export default function SignInPage({ setJwtToken, setUserModel }) {
     }).then(res => {
       const jwt = res.data.token
       setJwtToken(jwt)
-      axios.get("https://3.22.225.249/api/user").then(res => {
+      axios.get("https://api.teahouseapps.app/api/user").then(res => {
         setUserModel(res.data.user)
         history.push('/dashboard')
       })
