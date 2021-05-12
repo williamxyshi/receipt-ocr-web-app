@@ -76,7 +76,7 @@ const people = [
    
       <div className="flex flex-col p-11">
       <p className="text-sm text-gray-900 sm:text-xl md:mt-5 md:max-w-3xl">
-              Append all routes to https://api.teahouseapps.app
+              Append all routes to https://api.teahouseapps.app with api key as 'token' header
             </p>
       <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
