@@ -9,7 +9,7 @@ import axios from 'axios'
     const user = props.user
     console.log(props)
     if(props.user.calls == -1){
-        axios.get("http://3.22.225.249/api/user").then(res => {
+        axios.get("https://api.teahouseapps.app/api/user").then(res => {
             props.setUserModel(res.data.user)
             history.push('/dashboard')
           })
