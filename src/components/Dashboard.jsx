@@ -3,6 +3,10 @@ import { LockClosedIcon } from '@heroicons/react/solid'
 import { useHistory, Link } from "react-router-dom";
 import {useState} from 'react'
 import axios from 'axios'
+const people = [
+    { name: '/api/receiptocr', title: '{\'receipt\': \'receipt.jpg\'}', email: '{\'amount\': \'10.12\'}' },
+    // More people...
+  ]
 
   export default function Dashboard(props) {
     const history = useHistory()
@@ -68,6 +72,54 @@ import axios from 'axios'
           ))}
         </dl>
       </div>
+
+   
+      <div className="flex flex-col p-11">
+      <p className="text-sm text-gray-900 sm:text-xl md:mt-5 md:max-w-3xl">
+              Append all routes to https://api.teahouseapps.app
+            </p>
+      <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+          <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+            <table className="min-w-full divide-y divide-gray-200">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th
+                    scope="col"
+                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Route
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Request
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Response
+                  </th>
+
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {people.map((person) => (
+                  <tr key={person.email}>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{person.name}</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{person.title}</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{person.email}</td>
+
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
 
     )
