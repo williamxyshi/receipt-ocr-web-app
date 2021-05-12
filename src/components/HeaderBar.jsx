@@ -76,7 +76,7 @@ export default function Example() {
               </a>
               </Link>
             <div className="flex justify-start lg:w-0 lg:flex-1">
-              <a className="underline" href="https://github.com/williamxyshi/receipt-ocr-rest-api">
+              <a className="underline" href="https://github.com/williamxyshi/OCR-REST-API">
                 <span className="sr-only">Workflow</span>
                 contribute on GitHub
       
